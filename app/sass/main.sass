@@ -58,7 +58,7 @@ a
 	color: inherit	
 	display: inline-block
 
-ul, li 
+ul, ol, li 
 	margin: 0
 	padding: 0
 	list-style: none		
@@ -977,6 +977,35 @@ footer
 				height: auto	
 				margin-top: 46px
 				margin-bottom: 46px
+
+			.description-list 
+				font-family: Inter
+				font-style: normal
+				font-weight: normal
+				font-size: 16px
+				line-height: 24px
+				letter-spacing: -0.01em	
+				margin-bottom: 24px
+
+				.item 
+					position: relative
+					padding-left: 20px
+
+				.item:before 
+					content: ""
+					display: block 
+					position: absolute
+					left: 1px
+					top: 50%
+					transform: translateY(-50%)	
+					width: 10px
+					height: 10px
+					border-radius: 50% 
+					background-color: orange
+
+				.item.blue:before 	
+					background-color: blue
+
 
 
 /*   main-title-2  */
