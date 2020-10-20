@@ -1,0 +1,1055 @@
+@import "fonts"
+@import "libs"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+	box-sizing: border-box
+
+*, *::before, *::after 
+	box-sizing: inherit
+
+body
+	margin: 0
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
+	font-family: Gilroy
+	font-style: normal
+	font-weight: 800
+	font-size: 16px
+	line-height: 16px
+	color: #141A2C
+	background-color: #F6F6F6
+
+a 
+	text-decoration: none 
+	color: inherit	
+	display: inline-block
+
+ul, li 
+	margin: 0
+	padding: 0
+	list-style: none		
+
+h1, h2, h3, h4, h5, h6 
+	margin: 0
+
+p 
+	margin: 0
+
+.container	
+	max-width: 1246px
+	padding: 0 15px
+	margin: 0 auto
+
+body 
+	padding-top: 120px
+
+
+/*   Header    */ 
+
+
+.main-header
+	max-width: 1246px
+	padding: 0 15px
+	margin: 0 auto
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding-top: 48px
+	padding-bottom: 46px
+
+	.logo 
+		margin-right: 30px
+		position: relative		
+
+		a 
+			display: inline-block
+
+			img 
+				display: inline-block
+				width: 100% 
+				height: auto
+
+
+	.header-nav
+
+		.dekstop
+			display: flex
+			justify-content: space-between
+
+			li 
+				margin-right: 24px
+
+				a 
+					letter-spacing: 0.02em
+					text-transform: uppercase
+					transition: 0.6s
+
+				a:hover 
+					color: #FF6A00	
+
+			li:last-child 
+				margin-right: 0	
+
+	.user	
+		display: flex
+		justify-content: space-between	
+
+		.language 
+			margin-right: 44px
+
+			.language-button
+				display: inline-block
+				letter-spacing: 0.02em
+				text-transform: uppercase
+				color: #777F99
+				margin-left: 3px
+				cursor: pointer
+
+			.language-button.current 
+				color: #FF6A00	
+
+		.telefone				
+			margin-right: 44px
+			position: relative
+
+			a 
+				display: block
+				letter-spacing: 0.02em
+				text-transform: uppercase
+				position: relative
+				padding-left: 24px
+
+			a:before 
+				content: ""
+				display: block 
+				position: absolute	
+				background: url(../img/telefone-icon.svg) no-repeat center
+				width: 16px
+				height: 16px
+				left: 0 
+
+		.enter-account	
+			letter-spacing: 0.02em
+			text-transform: uppercase
+			position: relative
+			padding-right: 24px
+			cursor: pointer
+
+		.enter-account:before	
+			content: ""
+			display: block 
+			position: absolute	
+			background: url(../img/user-enter-icon.svg) no-repeat center
+			width: 16px
+			height: 16px
+			right: 0 	
+
+		.mobile-nav
+			display: none
+			margin-left: 35px
+			position: relative
+			top: -2px
+			
+			.hamburger-icon-container 
+				position: relative
+				cursor: pointer
+				width: 24px
+				height: 24px				
+
+			.hamburger-icon-container.hamburger-active
+				top: 2px	
+			
+			.hamburger-icon 
+				transform: translateY(-50%)
+			
+			.hamburger-icon,
+			.hamburger-icon:before,
+			.hamburger-icon:after 
+				content: ''
+				position: absolute
+				height: 3px
+				width: 100%
+				background: #001727
+				transition: all .2s ease
+
+			.hamburger-icon:after 
+				width: 50%				
+			
+			.hamburger-icon 
+				top: 50%
+			
+
+			.hamburger-icon:before 
+				top: -200%
+			
+			.hamburger-icon:after 
+				top: 200%			
+
+			.hamburger-active .hamburger-icon 
+				transform: rotate(45deg) translate(-3px,-3px)			
+
+			.hamburger-active .hamburger-icon:before,
+			.hamburger-active .hamburger-icon:after 
+				top: 0
+			
+			.hamburger-active .hamburger-icon:before 
+				transform: rotate(90deg)
+
+
+			.mobile-open
+				letter-spacing: 0.02em
+				text-transform: uppercase
+				display: none
+				flex-direction: column
+				position: absolute
+				top: 27px
+				right: 0
+				min-width: 160px
+				text-align: center
+				background-color: #262E47
+
+				li
+					a
+						display: inline-block
+						margin: 10px 0
+						width: 100%
+						color: #fff
+
+.main-nav-wrapper
+	transition: 0.6s background-color
+
+.main-nav-wrapper	
+	z-index: 6
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%	
+
+.main-nav-wrapper.scroll-nav	
+	background-color: #fff	
+	border-bottom: 1px solid #BEC6D1
+
+	.main-header
+		padding-top: 26px
+		padding-bottom: 26px
+
+/*   main-title   */ 
+
+.main-title-wrapper		
+	background: url(../img/main-title-background.png) center no-repeat
+	background-size: auto 100%
+	overflow: hidden
+	margin-top: -44px
+
+	.main-title
+		max-width: 1246px
+		padding: 0 15px
+		margin: 0 auto	
+		padding-top: 66px	
+		padding-bottom: 127px
+		margin-top: 29px
+		position: relative
+
+		.white 
+			font-family: Gilroy
+			font-style: normal
+			font-weight: 900
+			font-size: 172px
+			line-height: 162px
+			text-transform: uppercase
+			color: transparent		
+			-webkit-text-stroke-width: 2px
+			-webkit-text-stroke-color: black
+			margin-bottom: -26px
+			
+
+			span 
+				display: block
+
+			.second 
+				text-align: right	
+
+		.black 
+			font-family: Gilroy
+			font-style: normal
+			font-weight: 900
+			font-size: 172px
+			line-height: 162px
+			text-transform: uppercase	
+
+			span 
+				display: block
+
+			.first
+				text-align: center	
+
+		.scroll-button
+			display: inline-block
+			font-family: Gilroy
+			font-style: normal
+			font-weight: 800
+			font-size: 16px
+			line-height: 16px
+			letter-spacing: 0.02em
+			text-transform: uppercase
+			color: #141A2C
+			padding-left: 40px
+			position: absolute
+			right: 0
+			bottom: 188px
+			transform: rotate(270deg)
+
+			.arrow-icon
+				display: inline-block
+				transform: rotate(-270deg)
+				position: absolute
+				left: 0
+				top: -4px
+				width: 16px
+				height: 24px
+
+
+/*   about-company   */ 
+
+.about-company
+	max-width: 1246px
+	padding: 0 15px
+	margin: 0 auto
+	padding-bottom: 130px
+	padding-top: 3px
+	margin-top: 93px
+
+	.title-mobile
+		display: none
+		font-size: 24px
+		line-height: 24px
+		letter-spacing: 0.01em
+		text-transform: uppercase
+		margin-bottom: 28px
+
+	.about-company-content
+		display: flex
+		justify-content: space-between
+
+		.years
+			width: 50%
+			box-sizing: border-box
+			background: url(../img/years-background.png) 27px 4px no-repeat
+			background-size: 472px 280px
+			padding-right: 16px
+
+			.title
+				font-size: 24px
+				line-height: 24px
+				letter-spacing: 0.01em
+				text-transform: uppercase
+				margin-bottom: 190px
+
+			.data
+				font-weight: 900
+				font-size: 172px
+				line-height: 162px				
+
+				span 
+					display: block
+
+				.first 
+					color: transparent		
+					-webkit-text-stroke-width: 2px
+					-webkit-text-stroke-color: black
+					text-align: right
+					margin-bottom: -26px
+
+		.description	
+			width: 50%
+			box-sizing: border-box	
+			padding-left: 16px
+
+			.title
+				max-width: 488px
+				font-size: 40px
+				line-height: 40px
+				margin-bottom: 35px				
+
+			p 
+				max-width: 488px
+				font-family: Inter
+				font-style: normal
+				font-weight: normal
+				font-size: 16px
+				line-height: 24px
+				letter-spacing: -0.01em
+
+			.link-more
+				display: inline-block
+				text-align: center
+				letter-spacing: 0.02em
+				text-transform: uppercase
+				min-width: 208px
+				border: 2px solid #141A2C
+				border-radius: 40px
+				padding: 22px 15px
+				margin-top: 49px
+				transition: 0.6s
+				background-color: transparent
+
+			.link-more:hover
+				color: #fff
+				background-color: #FF6A00
+				border: 2px solid #FF6A00	
+
+
+/*   probucts  */ 	
+
+.products-wrapper	
+	margin-top: 2px
+	padding-bottom: 30px
+	background: url(../img/products-background.png) 19% 0px no-repeat
+	background-size: 834px 100%
+
+	.products
+		max-width: 1246px
+		padding: 0 15px
+		margin: 0 auto
+
+		.title
+			font-size: 24px
+			line-height: 24px
+			letter-spacing: 0.01em
+			text-transform: uppercase
+			position: relative
+			top: 40px
+
+		.products-content				
+			display: flex
+			flex-direction: column
+			align-items: flex-end
+
+			.company-name
+				font-family: Gilroy
+				font-style: normal
+				font-weight: 900
+				font-size: 172px
+				line-height: 162px
+				text-transform: uppercase	
+				width: 800px
+				margin-bottom: 19px
+
+				span 
+					display: block
+
+				.first 
+					color: transparent		
+					-webkit-text-stroke-width: 2px
+					-webkit-text-stroke-color: black
+					text-align: right
+					margin-bottom: -26px
+
+				.second	
+					transition: 0.6s
+
+			.about	
+				width: 50%
+				box-sizing: border-box	
+				padding-left: 16px
+
+				.title
+					max-width: 488px
+					font-size: 40px
+					line-height: 40px
+					margin-bottom: 72px
+
+				p 
+					max-width: 488px
+					font-family: Inter
+					font-style: normal
+					font-weight: normal
+					font-size: 16px
+					line-height: 24px
+					letter-spacing: -0.01em
+
+				.link-more
+					display: inline-block
+					text-align: center
+					letter-spacing: 0.02em
+					text-transform: uppercase
+					min-width: 208px
+					border: 2px solid #141A2C
+					border-radius: 40px
+					padding: 22px 15px
+					margin-top: 49px
+					transition: 0.6s
+					background-color: transparent
+
+				
+
+		.products-content:hover
+
+			.company-name
+
+				.second 
+					color: #FF6A00
+
+			.about		
+
+				.link-more
+					color: #fff
+					background-color: #FF6A00
+					border: 2px solid #FF6A00		
+
+
+/*   probucts-2  */ 
+
+.products-wrapper-2
+	background: none
+	margin-top: 159px
+	margin-bottom: 162px
+
+	.products
+		background: url(../img/products-2-background.png) top right no-repeat
+		background-size: 576px 796px
+
+		.products-content
+			align-items: flex-start
+
+			.company-name
+				margin-top: -14px
+
+				.first 
+					text-align: left 
+
+				.second 
+					text-align: right 	
+				
+
+			.about
+				padding-left: 100px
+
+				.title
+					margin-bottom: 72px
+
+
+
+/*   news  */
+
+.new-wrapper
+	border-top: 1px solid #BEC6D1	
+
+.news	
+	max-width: 1246px
+	padding: 0 15px
+	margin: 0 auto	
+	padding-top: 61px
+	padding-bottom: 128px
+
+	.title
+		display: flex
+		justify-content: space-between
+		margin-bottom: 51px
+
+		h3 
+			font-size: 24px
+			line-height: 24px
+			letter-spacing: 0.01em
+			text-transform: uppercase
+
+		.all-news
+			letter-spacing: 0.02em
+			text-transform: uppercase
+			color: #FF6A00
+			line-height: 24px
+			position: relative
+			padding-right: 40px
+
+		.all-news:before
+			content: ""
+			display: block 
+			position: absolute	
+			background: url(../img/all-news-icon.svg) no-repeat center
+			width: 24px
+			height: 16px
+			right: 0	
+			top: 50%
+			transform: translateY(-50%)
+
+
+	.news-list
+		display: flex
+		justify-content: space-between		
+
+		li 
+			max-width: 384px
+
+			.news-link 
+				display: block
+				transition: 0.6s
+
+				img 
+					display: block
+					width: 100%
+					height: auto	
+
+				.data
+					letter-spacing: 0.02em
+					text-transform: uppercase
+					margin-top: 13px
+
+					.month
+						color: #FF6A00
+
+				.about 
+					font-family: Inter
+					font-weight: normal
+					font-size: 16px
+					line-height: 24px
+					letter-spacing: -0.01em
+					transition: 0.6s
+					margin-top: 9px
+					margin-bottom: 21px
+
+				.about:hover
+					color: #FF6A00	
+
+				.programs	
+					font-family: Inter
+					font-weight: normal
+					font-size: 13px
+					line-height: 16px
+					color: #777F99
+
+					.programs-category
+						display: inline-block
+						margin-right: 4px
+						transition: 0.6s
+
+					.programs-category:hover
+						color: #FF6A00	
+
+
+
+/*   partners  */
+
+.partners
+	background-color:#262E47	
+	padding-top: 126px
+	padding-bottom: 100px
+	overflow: hidden
+
+	.title
+		max-width: 1246px
+		padding: 0 15px
+		margin: 0 auto
+		font-size: 24px
+		line-height: 24px
+		letter-spacing: 0.01em
+		text-transform: uppercase
+		color: #FFFFFF
+		margin-bottom: 48px
+
+	.partners-slider
+
+		.partners-slider-item
+			display: block
+			width: 280px
+			height: 136px
+			margin-right: 32px
+			cursor: pointer
+			border: 1px solid rgba(255, 255, 255, 0.1)
+			border: 1px solid transparent
+			position: relative
+			overflow: hidden
+			padding: 1px
+			transition: 0.6s all
+
+			a 
+				display: flex
+				height: 100%
+				background-color:#262E47
+				z-index: 2
+				justify-content: center
+				align-items: center
+	
+
+
+			a:focus 
+				outline: 0px solid transparent	
+
+		.partners-slider-item:hover
+			padding: 0	
+			border: 1px solid rgba(255, 255, 255, 0.1)
+			   
+
+					
+
+		.partners-slider-item:focus 
+			outline: 0px solid transparent	
+
+	.advantages
+		max-width: 1246px
+		padding: 0 15px
+		margin: 0 auto
+		display: flex
+		justify-content: space-between
+		color: #FFFFFF
+		margin-top: 128px
+
+		.advantages-title
+			font-size: 24px
+			line-height: 24px
+			letter-spacing: 0.01em
+			text-transform: uppercase
+
+		.advantages-about	
+			font-family: Inter
+			font-weight: normal
+			font-size: 16px
+			line-height: 24px
+			letter-spacing: -0.01em
+			max-width: 800px
+
+			p 
+				margin-bottom: 24px
+
+							
+/*   footer  */
+
+footer
+	background-color: #262E47
+	border-top: 1px solid rgba(255, 255, 255, 0.1)
+	padding-top: 96px
+	padding-bottom: 107px
+
+	.footer-wrapper 
+		max-width: 1246px
+		padding: 0 15px
+		margin: 0 auto
+
+		.conacts
+			display: flex
+			justify-content: space-between
+
+			.item
+				display: block
+				font-size: 24px
+				line-height: 56px
+				color: #FFFFFF
+				transition: 0.6s
+
+				.icon
+					display: inline-block
+					width: 56px
+					height: 56px
+					border-radius: 50%
+					background-color: #FF6A00
+					text-align: center
+					margin-right: 12px
+
+			.item:hover 
+				color: #FF6A00	
+
+			.social-link.mobile
+				display: none
+
+				.item
+					width: 56px
+					height: 56px
+					border: 1px solid rgba(255, 255, 255, 0.1)
+					border-radius: 50%
+					margin-left: 8px	
+					position: relative
+
+					img 
+						display: block
+						position: absolute
+						top: 50% 
+						left: 50% 
+						transform: translateX(-50%) translateY(-50%)	
+
+		.footer-information
+			display: flex
+			justify-content: space-between
+			margin-top: 78px
+
+			.column
+
+				.column-title
+					letter-spacing: 0.02em
+					text-transform: uppercase
+					color: #FFFFFF
+					margin-bottom: 25px
+
+				.column-list	
+
+					.item
+						margin-bottom: 12px
+
+						a
+							display: inline-block
+							font-family: Inter
+							font-weight: normal
+							font-size: 14px
+							line-height: 20px
+							letter-spacing: -0.01em
+							color: #777F99
+							transition: 0.6s
+
+						a:hover
+							color: #FF6A00
+
+		
+
+			.social-link
+				display: flex
+
+				.item
+					display: inline-block
+					text-align: center
+					width: 56px
+					height: 56px
+					border: 1px solid rgba(255, 255, 255, 0.1)
+					border-radius: 50%
+					margin-left: 8px
+					position: relative
+
+					img 
+						display: block
+						position: absolute
+						top: 50% 
+						left: 50% 
+						transform: translateX(-50%) translateY(-50%)
+
+
+		.copyright-information
+			position: relative
+			display: flex
+			justify-content: center
+			margin-top: 72px
+
+			.company
+				font-family: Inter
+				font-weight: normal
+				font-size: 14px
+				line-height: 20px
+				letter-spacing: -0.01em
+				color: #777F99
+				position: absolute
+				left: 0
+				transition: 0.6s			
+
+			.company:hover
+				color: #FF6A00	
+
+			.rules	
+				font-family: Inter
+				font-weight: normal
+				font-size: 14px
+				line-height: 20px
+				letter-spacing: -0.01em
+				color: #777F99
+
+				.rules-link
+					display: inline-block
+					margin-left: 38px
+					transition: 0.6s
+
+				.rules-link:first-child	
+					margin-left: 0
+
+				.rules-link:hover
+					color: #FF6A00	
+
+
+/*   about.html  */
+	
+
+.about-page-wrapper	
+	background: url(../img/about-page/about-page-background.png) top center no-repeat
+	background-size: 1398px 1332px
+	padding-bottom: 73px
+	border-top: 1px solid #BEC6D1
+	
+
+	.about-page-content	
+		max-width: 1246px
+		padding: 0 15px
+		margin: 0 auto
+
+		.page-links
+			padding-top: 31px
+
+			.link-item
+				display: inline-block
+				font-family: Inter
+				font-style: normal
+				font-weight: normal
+				font-size: 13px
+				line-height: 16px
+				color: #777F99
+				padding-right: 32px
+				position: relative
+
+			.link-item:before
+				content: "—"	
+				display: block
+				position: absolute
+				width: 32px
+				height: 16px
+				text-align: center
+				right: 0
+
+			.current
+				font-family: Inter
+				font-style: normal
+				font-weight: normal
+				font-size: 13px
+				line-height: 16px
+				color: #141A2C
+
+		.main-title
+			font-size: 88px
+			line-height: 88px
+			letter-spacing: -0.01em
+			margin-top: 56px
+			margin-bottom: 69px
+
+		.description
+			max-width: 800px
+			margin: 0 auto
+
+			.description-title
+				font-size: 32px
+				line-height: 32px
+				border-bottom: 1px solid #BEC6D1
+				padding-bottom: 66px
+				margin-bottom: 60px
+
+			.description-subtitle	
+				font-size: 32px
+				line-height: 32px
+				margin-bottom: 39px
+
+			p 
+				font-family: Inter
+				font-style: normal
+				font-weight: normal
+				font-size: 16px
+				line-height: 24px
+				letter-spacing: -0.01em	
+				margin-bottom: 24px
+
+			.about-content-image
+				display: block
+				width: 100% 
+				height: auto	
+				margin-top: 46px
+				margin-bottom: 46px
+
+
+/*   main-title-2  */
+.main-title-wrapper-2	
+	background: url(../img/second-main/second-main-header-background.png) center right no-repeat
+	background-size: auto 100%
+	overflow: hidden
+
+	.main-title
+		max-width: 1246px
+		padding: 0 15px
+		margin: 0 auto	
+		text-align: center
+		padding-top: 110px		
+		padding-bottom: 178px
+
+		.logo
+			font-size: 24px
+			line-height: 24px
+			letter-spacing: 0.01em
+			text-transform: uppercase
+			color: #FF6A00
+
+		.title	
+			font-size: 88px
+			line-height: 88px
+			letter-spacing: -0.01em
+			color: #141A2C
+			margin-top: 17px
+			margin-bottom: 40px
+
+		.description
+			font-family: Inter
+			font-style: normal
+			font-weight: normal
+			font-size: 16px
+			line-height: 24px
+			letter-spacing: -0.01em
+			color: #141A2C
+			margin: 0 auto
+			max-width: 592px
+
+		.more
+			display: inline-block
+			position: relative	
+			font-size: 16px
+			line-height: 16px
+			letter-spacing: 0.02em
+			text-transform: uppercase
+			color: #141A2C
+			cursor: pointer
+			margin-top: 101px
+			transition: 0.6s
+
+		.more:before 
+			content: ""
+			display: block 
+			position: absolute
+			width: 15px
+			height: 24px 
+			background: url(../img/second-main/icon-arrow-down.svg) center no-repeat
+			background-size: cover	
+			left: 50% 
+			bottom: -41px 
+			transform: translateX(-50%)
+
+
+
+
+
+
+
+
+
+
+@import "media" // Всегда в конце
