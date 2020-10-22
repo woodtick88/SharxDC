@@ -662,6 +662,75 @@
 			.advantages-title
 				margin-bottom: 34px
 
+	
+
+	.main-header		
+
+		.user
+
+			.mobile-nav								
+
+				.mobile-open					
+					min-width: 100vw
+					height: calc(100vh - 80px)
+					right: -24px
+					top: 48px
+					box-sizing: border-box
+					text-align: left
+					padding-top: 39px
+					padding-bottom: 24px
+					display: none
+					flex-direction: column
+
+					li	
+						padding-bottom: 31px
+
+						.link
+							font-size: 24px
+							line-height: 24px
+
+					.description
+						display: flex	
+						flex-direction: column
+						justify-content: flex-end
+						padding-bottom: 0
+						flex-grow: 1
+
+						.description-link
+							display: block
+							font-family: Inter
+							font-style: normal;
+							font-weight: normal
+							font-size: 14px
+							line-height: 20px
+							letter-spacing: -0.01em
+							color: #777F99
+							margin-top: 12px
+
+					li:last-child 
+						padding-bottom: 0								
+
+
+				.mobile-open:before
+					content: ""	
+					display: block
+					position: absolute
+					left: 50% 
+					top: 0
+					transform: translateX(-50%)
+					width: calc(100% - 48px)
+					height: 1px
+					background-color: #bec6d1	
+
+
+			.mobile-nav.mobile-nav-active
+
+				.mobile-open
+					display: flex			
+
+						
+
+
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
